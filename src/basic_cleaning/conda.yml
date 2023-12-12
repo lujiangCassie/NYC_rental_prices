@@ -9,4 +9,3 @@ dependencies:
   - pip:
       - wandb==0.10.21
       - protobuf==3.19.5
-      - git+https://github.com/lujiangCassie/NYC_rental_prices.git#egg=wandb-utils&subdirectory=src
