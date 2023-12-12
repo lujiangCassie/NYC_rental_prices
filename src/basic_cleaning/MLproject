@@ -16,7 +16,7 @@ entry_points:
         description: Type of the artifact to create
         type: string
 
-      output description:
+      output_description:
         description: Description for the artifact
         type: string
 
