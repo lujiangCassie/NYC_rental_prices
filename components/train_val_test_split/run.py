@@ -40,7 +40,7 @@ def go(args):
         logger.info(f"Uploading {k}_data.csv dataset")
         fp_name = os.path.join(os.getcwd(), "tempfile.csv")
 
-        df.to_csv(fp.name, index=False)
+        df.to_csv(fp_name, index=False)
 
         log_artifact(
             f"{k}_data.csv",
