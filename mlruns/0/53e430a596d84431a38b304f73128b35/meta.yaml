@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/cassi/Documents/udacity/ML_DevOps/NYC_rental_prices/mlruns/0/53e430a596d84431a38b304f73128b35/artifacts
+end_time: 1702487760091
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 53e430a596d84431a38b304f73128b35
+run_uuid: 53e430a596d84431a38b304f73128b35
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1702487746216
+status: 4
+tags: []
+user_id: cassi
