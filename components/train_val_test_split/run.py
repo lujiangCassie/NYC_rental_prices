@@ -46,7 +46,7 @@ def go(args):
             f"{k}_data.csv",
             f"{k}_data",
             f"{k} split of dataset",
-            fp.name,
+            fp_name,
             run,
         )
 
