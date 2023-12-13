@@ -66,9 +66,10 @@ def go(config: DictConfig):
 
         if "data_check" in active_steps:
             _ = mlflow.run(
-                os.path.join(hydra.utils.get_original_cwd(), "src", "data_check"),
+                f"{config['main']['src_repository']}/data_check",
                 "main",
-                 parameters={
+                version='main',
+                parameters={
                      "csv": "clean_sample.csv:latest",
                      "ref": "clean_sample.csv:reference",
                      "kl_threshold": config['data_check']['kl_threshold'],
@@ -100,9 +101,10 @@ def go(config: DictConfig):
             # NOTE: use the rf_config we just created as the rf_config parameter for the train_random_forest
             # step
             _ = mlflow.run(
-                os.path.join(hydra.utils.get_original_cwd(), "src", "train_random_forest"),
+                f"{config['main']['src_repository']}/train_random_forest",
                 "main",
-                 parameters={
+                version='main',
+                parameters={
                      "trainval_artifact": "trainval_data.csv:latest",
                      "val_size": config['modeling']['val_size'],
                      "random_seed": config['modeling']['random_seed'],
@@ -115,9 +117,10 @@ def go(config: DictConfig):
 
         if "test_regression_model" in active_steps:
             _ = mlflow.run(
-                os.path.join(hydra.utils.get_original_cwd(), "src", "data_check"),
+                f"{config['main']['components_repository']}/test_regression_model",
                 "main",
-                 parameters={
+                version='main',
+                parameters={
                      "mlflow_model": "random_forest_export:prod",
                      "test_dataset": "test_data.csv:latest"
                  },
