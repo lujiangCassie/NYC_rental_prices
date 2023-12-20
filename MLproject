@@ -15,7 +15,4 @@ entry_points:
         type: str
         default: ''
 
-    command:  >-
-         @echo off
-         set command ="python main.py main.steps={steps}  %{hydra_options}%"
-         echo %command%
+    command:  "python main.py main.steps={steps}"
